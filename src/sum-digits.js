@@ -12,7 +12,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For 91, the result should be 1 (9 + 1 = 10, 1 + 0 = 1)
  *
  */
-function getSumOfDigits(n) {
+function getSumOfDigits(n, count = 0) {
   if (n < 10) return count;
   
   return getSumOfDigits(
