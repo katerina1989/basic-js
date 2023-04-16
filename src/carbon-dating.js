@@ -17,11 +17,19 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-function dateSample(/* sampleActivity */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function dateSample(sampleActivity ) {
+ 	
+if(typeof sampleActivity !== 'string') return false;
+		const year = +sampleActivity;
+		const l=0.693; /* l-постоянная полураспада карбонада=*/
+    if(isNaN(year)) return false;
+		if(year <= 0 || year > 15 ) return false;
+		
+
+		return Math.ceil(Math.log(15 / year) * 5730 / l);
+
 }
-/* l-постоянная полураспада карбонада=0.693 */
+
 
 module.exports = {
   dateSample
