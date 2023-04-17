@@ -11,7 +11,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * For n = 152, the output should be 52
  *
  */
-function deleteDigit(n ) {
+function deleteDigit(n) {
   const numArr = n.toString().split('');
   const result = [];
 
@@ -20,10 +20,6 @@ function deleteDigit(n ) {
   result = Math.max(result);
 }
 
-module.exports = {
-  deleteDigit,
-};
-  
 module.exports = {
   deleteDigit
 };
